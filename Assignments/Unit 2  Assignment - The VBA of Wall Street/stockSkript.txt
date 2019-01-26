@@ -1,0 +1,6 @@
+Sub stockMarjet()
+    
+    For i = 1 To 43398
+        
+    Next i
+End Sub
