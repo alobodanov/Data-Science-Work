@@ -1,6 +1,6 @@
 # Stock Market Analyst - The VBA of Wall Street
 
-Please refer to Unit 2-Assignment-The VBA of Wall Street-Script-Hard.txt file for code.
+Please refer to Unit 2-Assignment-Script-Hard.txt file for code.
 
 Assignment Background -
 
