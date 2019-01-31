@@ -1,5 +1,3 @@
-'Please note, this file contains multiple subs so please start with the main one
-
 Sub Main()
     Dim ws As Worksheet
 
@@ -52,7 +50,7 @@ Sub Main()
                 Else
                     percentChange = 1
                     If openPrice <> 0 Then
-                        percentChange = yearlyChange / openPrice
+                        percentChange = Round(yearlyChange / openPrice, 2)
                         Cells(row, 11).Value = percentChange
                         Cells(row, 11).NumberFormat = "0.00%"
                     End If
@@ -78,31 +76,32 @@ End Sub
 Sub greatestValue()
 
     Cells(1, 16).Value = "Ticker"
-    Cells(1, 17).Value = "Value"
+        Cells(1, 17).Value = "Value"
 
-    Columns("O").ColumnWidth = 20
-    Columns("Q").ColumnWidth = 16
+        Columns("O").ColumnWidth = 20
+        Columns("Q").ColumnWidth = 16
 
-    Cells(2, 15).Value = "Greatest % Increase"
-    Cells(3, 15).Value = "Greatest % Decrease"
-    Cells(4, 15).Value = "Greatest Total Volume"
+        Cells(2, 15).Value = "Greatest % Increase"
+        Cells(3, 15).Value = "Greatest % Decrease"
+        Cells(4, 15).Value = "Greatest Total Volume"
 
-    yearChangeLastRow = Cells(Rows.Count, 10).End(xlUp).row
+        yearChangeLastRow = Cells(Rows.Count, 10).End(xlUp).row
 
-    For i = 2 To yearChangeLastRow
-        If Cells(i, 11).Value = Application.WorksheetFunction.Max(Range("K2:K" & yearChangeLastRow)) Then
-            Cells(2, 16).Value = Cells(i, 9).Value
-            Cells(2, 17).Value = Cells(i, 11).Value
-            Cells(2, 17).NumberFormat = "0.00%"
-        ElseIf Cells(i, 11).Value = Application.WorksheetFunction.Min(Range("K2:K" & yearChangeLastRow)) Then
-            Cells(3, 16).Value = Cells(i, 9).Value
-            Cells(3, 17).Value = Cells(i, 11).Value
-            Cells(3, 17).NumberFormat = "0.00%"
-        ElseIf Cells(i, 12).Value = Application.WorksheetFunction.Max(Range("L2:L" & yearChangeLastRow)) Then
-            Cells(4, 16).Value = Cells(i, 9).Value
-            Cells(4, 17).Value = Cells(i, 12).Value
-        End If
+        For i = 2 To yearChangeLastRow
+            If Cells(i, 11).Value = Application.WorksheetFunction.Max(Range("K2:K" & yearChangeLastRow)) Then
+                Cells(2, 16).Value = Cells(i, 9).Value
+                Cells(2, 17).Value = Cells(i, 11).Value
+                Cells(2, 17).NumberFormat = "0.00%"
+            ElseIf Cells(i, 11).Value = Application.WorksheetFunction.Min(Range("K2:K" & yearChangeLastRow)) Then
+                Cells(3, 16).Value = Cells(i, 9).Value
+                Cells(3, 17).Value = Cells(i, 11).Value
+                Cells(3, 17).NumberFormat = "0.00%"
+            ElseIf Cells(i, 12).Value = Application.WorksheetFunction.Max(Range("L2:L" & yearChangeLastRow)) Then
+                Cells(4, 16).Value = Cells(i, 9).Value
+                Cells(4, 17).Value = Cells(i, 12).Value
+            End If
 
-    Next i
+        Next i
 
 End Sub
+
