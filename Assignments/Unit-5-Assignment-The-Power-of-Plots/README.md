@@ -1,64 +1,28 @@
-# Unit 4 | Assignment - Pandas
+# Unit 5 | Pymaceuticals Inc
 
 ## Heroes of Pymoli
 ![alt text](Image/Laboratory.jpg)
 
-Like many others in its genre, the game is free-to-play, but players are encouraged to purchase optional items that enhance their playing experience. As a first task, the company would like you to generate a report that breaks down the game's purchasing data into meaningful insights.
+While your data companions rushed off to jobs in finance and government, you remained adamant that science was the way for you. Staying true to your mission, you've since joined Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego, CA. Pymaceuticals specializes in drug-based, anti-cancer pharmaceuticals. In their most recent efforts, they've since begun screening for potential treatments to squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
 
-Your final report should include each of the following:
+As their Chief Data Analyst, you've been given access to the complete data from their most recent animal study. In this study, 250 mice were treated through a variety of drug regimes over the course of 45 days. Their physiological responses were then monitored over the course of that time. Your objective is to analyze the data to show how four treatments (Capomulin, Infubinol, Ketapril, and Placebo) compare.
 
-### Player Count
+To do this you are tasked with:
 
-* Total Number of Players
-
-### Purchasing Analysis (Total)
-
-* Number of Unique Items
-* Average Purchase Price
-* Total Number of Purchases
-* Total Revenue
-
-### Gender Demographics
-
-* Percentage and Count of Male Players
-* Percentage and Count of Female Players
-* Percentage and Count of Other / Non-Disclosed
-
-### Purchasing Analysis (Gender)
-
-* The below each broken by gender
-    - Purchase Count
-    - Average Purchase Price
-    - Total Purchase Value
-    - Average Purchase Total per Person by Gender
-    
-### Age Demographics
-
-* The below each broken into bins of 4 years (i.e. <10, 10-14, 15-19, etc.)
-    - Purchase Count
-    - Average Purchase Price
-    - Total Purchase Value
-    - Average Purchase Total per Person by Age Group
-    
-### Top Spenders
-
-* Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
-    - SN
-    - Purchase Count
-    - Average Purchase Price
-    - Total Purchase Value
-    
-### Most Popular Items
-
-* Identify the 5 most popular items by purchase count, then list (in a table):
-    - Item ID
-    - Item Name
-    - Purchase Count
-    - Item Price
-    - Total Purchase Value
+* Creating a scatter plot that shows how the tumor volume changes over time for each treatment.
+* Creating a scatter plot that shows how the number of metastatic (cancer spreading) sites changes over time for each treatment.
+* Creating a scatter plot that shows the number of mice still alive through the course of treatment (Survival Rate)
+* Creating a bar graph that compares the total % tumor volume change for each drug across the full 45 days.
 
 As final considerations:
 
 * You must use the Pandas Library and the Jupyter Notebook.
-* You must submit a link to your Jupyter Notebook with the viewable Data Frames.
+* You must use the Matplotlib library.
 * You must include a written description of three observable trends based on the data.
+* You must use proper labeling of your plots, including aspects like: Plot Titles, Axes Labels, Legend Labels, X and Y Axis Limits, etc.
+* Your scatter plots must include error bars. This will allow the company to account for variability between mice. You may want to look into pandas.DataFrame.sem for ideas on how to calculate this.
+* Remember when making your plots to consider aesthetics!
+    - Your legends should not be overlaid on top of any data.
+    - Your bar graph should indicate tumor growth as red and tumor reduction as green. It should also include a label with the percentage change for each bar. You may want to consult this tutorial for relevant code snippets.
+
+* See Starter Workbook for a reference on expected format. (Note: For this example, you are not required to match the tables or data frames included. Your only goal is to build the scatter plots and bar graphs. Consider the tables to be potential clues, but feel free to approach this problem, however, you like.)
